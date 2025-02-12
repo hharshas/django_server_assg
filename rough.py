@@ -44,4 +44,4 @@
 
 
 
-# todo for now = drag update, timezone, profile-viewer then given to ratul 
+# todo for now = timezone, profile-viewer then given to ratul 
