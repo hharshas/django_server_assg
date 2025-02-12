@@ -58,6 +58,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
+USE_TZ = True 
+TIME_ZONE = "Asia/Kolkata" 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
