@@ -8,7 +8,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 class TimetableSerializer(serializers.ModelSerializer):
     class Meta:
         model = Timetable
-        fields = ['id', 'date', 'start_time', 'end_time', 'event_name']
+        fields = ['id', 'start_time', 'end_time', 'event_name']
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:

@@ -13,5 +13,5 @@ urlpatterns = [
     path('', views.getRoutes),
     path('timetable/', TimetableListView.as_view(), name='timetable-list'),
     path('timetable/<int:pk>/', TimetableUpdate.as_view(), name='timetable-detail'),
-    path('timetable/<str:username>/', UserTimetableView.as_view(), name='user-timetable'),
+    path('user-timetable/<str:username>/', UserTimetableView.as_view(), name='user-timetable'),  # Changed URL
 ]

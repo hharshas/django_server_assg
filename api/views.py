@@ -31,17 +31,21 @@ class TimetableListView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
+
 class TimetableUpdate(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def put(self, request, pk):
         timetable = get_object_or_404(Timetable, id=pk, user=request.user)
 
+        print("Received data:", request.data)  # Debugging log
+
         serializer = TimetableSerializer(timetable, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class UserTimetableView(APIView):
     permission_classes = [permissions.AllowAny]
