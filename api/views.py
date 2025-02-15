@@ -87,3 +87,8 @@ def delete_event(request, pk):
     event = get_object_or_404(Timetable, id=pk, user=request.user)
     event.delete()
     return Response({"message": "Event deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET'])
+def welcome_view(request):
+    return Response({"message": "Welcome Devs"})
