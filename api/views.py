@@ -56,7 +56,7 @@ class UserTimetableView(APIView):
         serializer = TimetableSerializer(timetable, many=True)
         return Response(serializer.data)
 
-# Get All Routes
+# get all routes
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -81,3 +81,9 @@ def testEndPoint(request):
     return Response({}, status.HTTP_400_BAD_REQUEST)
 
     
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+def delete_event(request, pk):
+    event = get_object_or_404(Timetable, id=pk, user=request.user)
+    event.delete()
+    return Response({"message": "Event deleted successfully"}, status=status.HTTP_204_NO_CONTENT)
