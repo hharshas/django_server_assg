@@ -1,9 +1,15 @@
 Django==5.1.6
+gunicorn==22.0.0
+whitenoise==6.6.0
+psycopg2-binary==2.9.10
 djangorestframework==3.15.2
-djangorestframework_simplejwt==5.4.0
 django-cors-headers==4.7.0
 sqlparse==0.5.3
 pytz==2022.1
-asgiref==3.8.1
-psycopg2-binary==2.9.10  # Remove if not using PostgreSQL
-PyJWT==2.3.0  # Remove if JWT not used
+typing_extensions==4.12.2
+requests==2.31.0
+djangorestframework_simplejwt==5.4.0
+PyJWT==2.8.0
+django-ckeditor==6.7.2
+Pillow==9.0.1
+django-jazzmin==3.0.1
