@@ -15,5 +15,5 @@ urlpatterns = [
     path('timetable/<int:pk>/', TimetableUpdate.as_view(), name='timetable-detail'),
     path('user-timetable/<str:username>/', UserTimetableView.as_view(), name='user-timetable'),
     path('timetable/delete/<int:pk>/', views.delete_event, name='delete-timetable'),
-    path('welcome/', welcome_view, name='welcome'),
+    path('welcome/', views.welcome_view, name='welcome'),
 ]
